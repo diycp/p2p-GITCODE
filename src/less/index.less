@@ -1,0 +1,94 @@
+//定义变量
+@colortoubu:#00a8ff;
+
+// 引入页头样式
+@import url("header.less");
+//工具提示的图片大小
+.tooltip img{
+    width: 100px;
+}
+
+
+
+
+//三大特色介绍
+#feature{
+    margin-top:20px;
+    margin-bottom: 20px;
+    .row{
+        &>div{
+            background: url("../../../images/feature01.png")no-repeat left center;
+            height: 65px;
+            padding-left: 80px;
+            margin-bottom: 15px;
+            h4{
+                font-weight: bold;
+
+            }
+        }
+       &>div:nth-of-type(2){
+        background: url("../../../images/feature02.png")no-repeat
+       }
+
+       &>div:nth-of-type(3){
+        background: url("../../../images/feature03.png")no-repeat
+       }
+    }
+}
+
+
+//借款样式
+.panel-default{
+    .panel-heading{
+        background-color: transparent;
+        border:none;
+        border-bottom: 1px solid #ddd;
+        padding: 0;
+    } 
+    h3{
+        color: @colortoubu;
+        border-bottom: 3px solid;
+        padding-bottom: 10px;
+        margin: 0px;
+    }
+    a{
+        margin-top: 10px;
+    }
+
+}
+.panel-heading{
+    padding: 10px 0px;
+}
+.panel{
+    border: none;
+}
+
+.panel-body{
+   
+   padding: 10px 0;
+    ul{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li{
+            line-height: 34px;
+            border-bottom: dotted 1px #ccc;
+            a{
+                color: #000;
+                &:hover{
+                    color: @colortoubu;
+                }
+            }
+        }
+    }
+
+}
+//解决小屏的版面错乱问题
+@media all and (max-width:414px){
+    .hideTitle{
+        display: none;
+    }
+}
+
+//引入footer样式
+@import url("footer.less");
