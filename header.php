@@ -21,6 +21,8 @@
         <li><a href="#">赶快充值</a></li>
         <li><a href="#">注销</a></li>
         <li><a href="#">帮助</a></li>
+        <li><a href="register.php">注册</a></li>
+        <li><a href="login.php">登录</a></li>
         <li><a href="#" data-toggle="tooltip" data-placement="bottom" data-html="true" title="<img src='./images/contract.png'/>">联系客服</a></li> 
         
     </ul>

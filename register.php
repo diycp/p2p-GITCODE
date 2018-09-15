@@ -38,39 +38,43 @@
             </div>
             <div class="panel-body">
                 <form id="myForm" class="form-horizontal">
+                    <p>请填写注册信息，点击“提交注册”即可完成注册！</p>
                 <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-3 control-label">用户名：</label>
-                    <div class="col-sm-9">
+                    <label for="inputEmail3" class="col-sm-4 control-label">用户名：</label>
+                    <div class="col-sm-4">
                     <input type="text" class="form-control" name="username" placeholder="请输入用户名">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-3 control-label">密码：</label>
-                    <div class="col-sm-9">
+                    <label for="inputPassword3" class="col-sm-4 control-label">密码：</label>
+                    <div class="col-sm-4">
                     <input type="password" class="form-control" name="password" placeholder="请输入密码">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-3 control-label">确认密码：</label>
-                    <div class="col-sm-9">
+                    <label for="inputPassword3" class="col-sm-4 control-label">确认密码：</label>
+                    <div class="col-sm-4">
                     <input type="password" class="form-control" name="repeatPassword" placeholder="">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-3 control-label">手机号码：</label>
-                    <div class="col-sm-9">
-                    <input type="text" class="form-control" name="mobile" placeholder="">
+                    <label for="inputPassword3" class="col-sm-4 control-label">手机号码：</label>
+                    <div class="col-sm-4">
+                    <input type="text" class="form-control" name="phone" placeholder="">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-3 control-label">电子邮件：</label>
-                    <div class="col-sm-9">
+                    <label for="inputPassword3" class="col-sm-4 control-label">电子邮件：</label>
+                    <div class="col-sm-4">
                     <input type="text" class="form-control" name="email" placeholder="">
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="col-sm-offset-3 col-sm-9">
-                    <button type="submit" class="btn btn-success">立即注册</button>
+                    <div class="col-sm-offset-4 col-sm-4">
+                    <button type="submit" class="btn btn-success">同意协议并注册</button>
+                    <a href="#" style="margin: 10px;font-size:16px;">已有账号，马上登录</a>
+                    <br/>
+                    <a href="#">《使用协议说明书》</a>
                     </div>
                 </div>
                 </form>
@@ -90,6 +94,7 @@ require_once("footer.php");
     <!-- 引入bootstrapvalidator.js -->
     <script src="./lib/bootstrapvalidator/js/bootstrapValidator.min.js"></script>
      <!-- 引入自己的jquery -->
-   <script src="./dist/js/regLogin.min.js"></script>
+   <script src="./dist/js/fom.min.js"></script>
+   <script src="./dist/js/p2p.min.js"></script>
 </body>
 </html>
