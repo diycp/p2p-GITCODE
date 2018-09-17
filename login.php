@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>注册-蓝源Eloan-p2p平台</title>
+    <title>登录-蓝源Eloan-p2p平台</title>
     <!-- 引入bootstrap.css样式 -->
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
      <!-- 引入bootstrapvalidator.css -->
      <link rel="stylesheet" href="./lib/bootstrapvalidator/css/bootstrapValidator.min.css">
     <!-- 引入css样式 -->
     <link rel="stylesheet" href="./dist/css/minCss/regLogin.min.css">
+  
+ 
 </head>
 <body>
    <!-- 引入导航一 -->
@@ -34,7 +36,7 @@
 <div class="container reglogin">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">用户注册</h3>
+                <h3 class="panel-title">用户登录</h3>
             </div>
             <div class="panel-body">
                 <form id="login" class="form-horizontal">
@@ -63,13 +65,40 @@
         </div>
     </div>
 
+
+
 <!-- 页脚 -->
 <?php
 require_once("footer.php");
   ?>
- <!-- 引入jquery -->
+
+
+
+  <!-- 蒙层的html结构 -->
+  <div class="modal fade" id="msgShowModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="msgShowTitle">标题</h4>
+        </div>
+        <div class="modal-body" id="msgShowContent">
+            内容
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭窗口</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+ 
+     <!-- 引入jquery -->
  <script src="./lib/jquery/jquery.min.js"></script>
-   
    <!-- 引入bootstrap.js -->
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
      <!-- 引入bootstrapvalidator.js -->
@@ -77,6 +106,6 @@ require_once("footer.php");
      <!-- 引入自己的jquery -->
    <script src="./dist/js/p2p.min.js"></script>
    <!-- 引入表单的js -->
-  <script src="./dist/js/login.min.js"></script>
+  <script src="./dist/js/fom.min.js"></script>
 </body>
 </html>

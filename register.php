@@ -94,7 +94,7 @@ require_once("footer.php");
     <!-- 引入bootstrapvalidator.js -->
     <script src="./lib/bootstrapvalidator/js/bootstrapValidator.min.js"></script>
      <!-- 引入自己的jquery -->
-   <script src="./dist/js/fom.min.js"></script>
+   <script src="./src/js/fom.js"></script>
    <script src="./dist/js/p2p.min.js"></script>
 </body>
 </html>

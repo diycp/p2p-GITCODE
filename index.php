@@ -15,6 +15,7 @@
   
 
 <?php
+require_once("topNan.php");
 require_once("header.php");
 ?>
 
