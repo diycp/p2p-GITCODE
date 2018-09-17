@@ -1,12 +1,77 @@
 // 引入页头样式
 @import url("header.less");
 
+//模板自己的样式定义
+#personal{
+    margin-top: 10px;
+
+    //左侧
+    .panel-body{
+        ul{
+            list-style: none;
+            li{
+                line-height: 30px;
+              
+            }
+        }
+    }
+
+    //右侧
+    #mainContent{
+        .panel-body{
+            padding: 10px 30px;
+
+            //1
+            #userHeader{
+                border-bottom: solid 1px #ccc;
+
+                #userHeaderLeft{
+                    padding: 0px;
+
+                    img{
+                        max-width: 90px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+            //2
+            #money{
+                font-size: 18px;
+                padding: 15px 0px;
+            }
+
+            //3
+            #myButton{
+                text-align: center;
+            }
+        }
+    }
+    
+}
+.el-accoun-auth{
+    padding: 40px 0px 0px 10px;
+    .el-accoun-auth-left{
+    float: left;
+}
+.el-accoun-auth-right{
+    float: right;
+    margin-left: 10px;
+ .h5{
+    font-weight: bold !important;
+	padding: 20px;
+	margin: 0px 0px 10px 0px;
+}   
+
+}
+.info{
+    font-size: 13px;
+    margin-top: 8px;
+    
+}
 
 
-
-
-
-
+}
 
 
 //引入页脚内容
