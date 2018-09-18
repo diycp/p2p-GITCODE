@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>栏目名称-p2p金融借贷平台</title>
+    <title>个人中心-p2p金融借贷平台</title>
     <!-- 引入bootstrap核心库 -->
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
     <!-- 引入编译和压缩后的css文件 -->
@@ -28,69 +28,16 @@
    <!-- 模板的内容开始 -->
    <div class="container" id="personal">
         <div class="row">
-            <!-- 左侧的菜单 -->
-            <div class="col-md-3 col-sm-6" id="leftTreeMenu">
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            借款项目
-                            </a>
-                        </h4>
-                        </div>
-                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            <ul>
-                                <li><a href="#">借款项目</a></li>
-                                <li><a href="#">还款明细</a></li>
-                                <li><a href="#">进行中的借款</a></li>
-                            </ul>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingTwo">
-                        <h4 class="panel-title">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            我的账户
-                            </a>
-                        </h4>
-                        </div>
-                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                        <div class="panel-body">
-                            <ul>
-                                <li><a href="#">账户信息</a></li>
-                                <li><a href="./Realname.php">实名认证</a></li>
-                                <li><a href="#">银行卡管理</a></li>
-                                <li><a href="#">登录记录</a></li>
-                            </ul>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingThree">
-                        <h4 class="panel-title">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            资产详情
-                            </a>
-                        </h4>
-                        </div>
-                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                        <div class="panel-body">
-                            <ul>
-                                <li><a href="#">账户流水</a></li>
-                                <li><a href="#">充值明细</a></li>
-                                <li><a href="#">提现记录</a></li>
-                                <li><a href="#">收款明细</a></li>
-                            </ul>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
-            </div>
+			<!-- 左侧的菜单 -->
+			<div class="col-md-3 col-xs-6" id="leftTreeMenu">
+				<?php 
+					 require_once("userMingxi.php");
+					?>
+			</div>
+		</div>
             <!-- 右侧的内容 -->
-            <div class="col-md-9 col-sm-12" id="mainContent">
+            <div class="col-sm-9 col-xs-12" id="mainContent">
+            <button type="button" class="btn btn-primary btn-xs" id="Btnon">隐藏</button>
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <!-- 1 -->
@@ -205,5 +152,42 @@
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <!-- 引入自定义的效果 -->
     <script src="./dist/js/p2p.min.js"></script>
+    <script>
+    $("#Btnon").on("click",function(){
+            //单击按钮时就切换类样式
+            //toggleClass("类名称") 对设置或移除被选元素的一个或多个类进行切换。
+            $("#personal").toggleClass("active");
+
+            //如果有active说明已隐藏，文字改为显示
+            //hasClass() 方法检查被选元素是否包含指定的 class。
+            if($("#personal").hasClass("active")){
+               $(this).text("显示");
+            }
+            else{
+               $(this).text("隐藏");
+            }
+});
+     var x1,x2;
+    $(window).on("touchstart",function (e){
+       //console.log(e)
+       x1=e.originalEvent.changedTouches[0].clientX;
+       y1=e.originalEvent.changedTouches[0].clientY;
+    });
+    //离开屏幕：滑动到目的地后离开屏幕
+    $(window).on("touchend",function (e){
+       //console.log(e)
+      var x2=e.originalEvent.changedTouches[0].clientX;
+      var y2=e.originalEvent.changedTouches[0].clientY;
+    //计算滑动的距离
+     var dx=x2-x1;
+     //不管左滑动还是右滑动，横向距离都有一个值
+    if(Math.abs(dx)>=100){
+        console.log("好！")
+        $("#Btnon").trigger("click");
+    }
+   
+    });
+    
+    </script>
 </body>
 </html>
