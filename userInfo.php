@@ -152,42 +152,7 @@
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <!-- 引入自定义的效果 -->
     <script src="./dist/js/p2p.min.js"></script>
-    <script>
-    $("#Btnon").on("click",function(){
-            //单击按钮时就切换类样式
-            //toggleClass("类名称") 对设置或移除被选元素的一个或多个类进行切换。
-            $("#personal").toggleClass("active");
-
-            //如果有active说明已隐藏，文字改为显示
-            //hasClass() 方法检查被选元素是否包含指定的 class。
-            if($("#personal").hasClass("active")){
-               $(this).text("显示");
-            }
-            else{
-               $(this).text("隐藏");
-            }
-});
-     var x1,x2;
-    $(window).on("touchstart",function (e){
-       //console.log(e)
-       x1=e.originalEvent.changedTouches[0].clientX;
-       y1=e.originalEvent.changedTouches[0].clientY;
-    });
-    //离开屏幕：滑动到目的地后离开屏幕
-    $(window).on("touchend",function (e){
-       //console.log(e)
-      var x2=e.originalEvent.changedTouches[0].clientX;
-      var y2=e.originalEvent.changedTouches[0].clientY;
-    //计算滑动的距离
-     var dx=x2-x1;
-     //不管左滑动还是右滑动，横向距离都有一个值
-    if(Math.abs(dx)>=100){
-        console.log("好！")
-        $("#Btnon").trigger("click");
-    }
-   
-    });
-    
-    </script>
+    <!-- 引入个人中心移动端的改造userInfo.js -->
+    <script src=./dist/js/userInfo.min.js></script>
 </body>
 </html>
