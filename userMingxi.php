@@ -33,6 +33,7 @@
                         <div class="panel-body">
                             <ul>
                                 <li><a href="#">借款项目</a></li>
+                                <li><a href="./borrow_statistics.php">借款项目报表</a></li>
                                 <li><a href="./borrow_apply.php">信用借款</a></li>
                                 <li><a href="#">还款明细</a></li>
                                 <li><a href="#">进行中的借款</a></li>
